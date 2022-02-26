@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> Welcome to The Best news broadcast Online </title>
-        {% endif %}
-    </head>
-    <body>
-        <body>
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+
+        {% block content %}
             <!-- Popular new section  -->
             <h3> Top news sources</h3>
              <ul>
@@ -17,6 +10,7 @@
                     <li>{{ popular_news.name}}</li>
                 {% endfor %}
             </ul>
-     </body>
-    </body>
-</html>
+     
+{% endblock%}
+
+  
