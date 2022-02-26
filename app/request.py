@@ -50,12 +50,13 @@ def process_results(news_list):
         name = news_item.get('name')
         description = news_item.get('description')
         url = news_item.get('url')
+        urlToImage =  news_item.get('urlToImage')
         language= news_item.get('language')
         country = news_item.get('country')
         category = news_item.get('category')
 
         if url:
-            news_object = News(id,name,description,url,language,country,category)
+            news_object = News(id,name,description,url, urlToImage ,language,country,category)
             news_results.append(news_object)
 
     return news_results
@@ -73,12 +74,13 @@ def get_new(id):
             name =  new_details_response.get('name')
             description =  new_details_response.get('description')
             url =  new_details_response.get('url')
+            urlToImage =  new_details_response.get('urlToImage')
             language= new_details_response.get('language')
             country =  new_details_response.get('country')
             category =  new_details_response.get('category')
 
 
-            new_object = News(id,name,description,url,language,country,category)
+            new_object = News(id,name,description,url,urlToImage,language,country,category)
 
     return new_object
 
