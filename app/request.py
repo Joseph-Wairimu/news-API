@@ -52,9 +52,10 @@ def process_results(news_list):
         url = news_item.get('url')
         language= news_item.get('language')
         country = news_item.get('country')
+        category = news_item.get('category')
 
         if url:
-            news_object = News(id,name,description,url,language,country)
+            news_object = News(id,name,description,url,language,country,category)
             news_results.append(news_object)
 
     return news_results
