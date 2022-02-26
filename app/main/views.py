@@ -17,14 +17,14 @@ def index():
     title = 'Home - Welcome to The Best news broadcast Online'
     return render_template('index.html', title = title,popular = popular_news)
 
-@app.route('/news/<int:id>')
-def news(id):
+@app.route('/news/<source_id>')
+def news(source_id):
 
     '''
     View movie page function that returns the movie details page and its data
     '''
-    news=get_new(id)
+    news=get_new(source_id)
     name= f'{news.name}'
-    return render_template('news.html',id = id ,name=name, news=news )
+    return render_template('news.html' ,name=name, news=news )
 
 
