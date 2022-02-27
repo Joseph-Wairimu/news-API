@@ -1,9 +1,9 @@
 
 from flask import render_template,request,redirect,url_for
 from .import main
-from ..request import get_news,get_new
+from ..request import get_news,get_new, get_category
 
-from ..models import Article
+from ..models import Articles
 
 
 @main.route('/')

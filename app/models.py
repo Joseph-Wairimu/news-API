@@ -14,7 +14,7 @@ class News:
         self.category = category
 
 
-class Article:
+class Articles:
     '''
     Class to define news article
     '''

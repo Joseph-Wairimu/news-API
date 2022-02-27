@@ -1,7 +1,7 @@
 
 
 import urllib.request,json
-from .models import News
+from .models import News , Articles
 #  News = news.News
 
 # Getting api key
