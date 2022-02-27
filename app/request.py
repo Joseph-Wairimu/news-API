@@ -142,3 +142,24 @@ def get_category(category):
 
 
     return article_source_results
+
+def process_category_results(articles_list):
+    '''
+    function that processes the json files of articles from the api key
+    '''
+    article_results = []
+    for article in articles_list:
+       
+        author = article.get('author')
+        description = article.get('description')
+        url = article.get('url')
+        urlToImage = article.get('urlToImage')
+        publishedAt = article.get('publishedAt')
+        title = article.get ('title')
+        content= article.get('content')
+        if url:
+            article_objects = Articles(author,title,description,url,urlToImage,publishedAt,content)
+            article_results.append(article_objects)
+
+    return article_results
+
