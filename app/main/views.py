@@ -56,3 +56,28 @@ def show_business():
     """
     category=get_category('business')
     return render_template('business.html',category=category)    
+
+@main.route('/entertainment')
+def show_entertainment():
+    """
+    Show articles function
+    """
+    category=get_category('entertainment')
+    return render_template('entertainment.html',category=category)        
+
+
+@main.route('/health')
+def show_health():
+    """
+    Show articles function
+    """
+    category=get_category('health')
+    return render_template('health.html',category=category)  
+
+@main.route('/sports')
+def show_sports():
+    """
+    Show articles function
+    """
+    category=get_category('sports')
+    return render_template('sports.html',category=category)         
