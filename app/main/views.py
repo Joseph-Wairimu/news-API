@@ -29,4 +29,13 @@ def news(source_id):
     name= f'{news.name}'
     return render_template('news.html' ,name=name, news=news )
 
+@main.route('/news/<id>')
+def news_articles(id):
+
+    """
+    View articles function
+    """
+    articles=get_article(id)
+    
+    return render_template('articles.html',articles=articles)
 
