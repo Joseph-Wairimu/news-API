@@ -47,3 +47,12 @@ def show_articles():
     """
     category=get_category('general')
     return render_template('general.html',category=category)
+
+
+@main.route('/business')
+def show_business():
+    """
+    Show articles function
+    """
+    category=get_category('business')
+    return render_template('business.html',category=category)    
