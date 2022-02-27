@@ -39,3 +39,11 @@ def news_articles(id):
     
     return render_template('articles.html',articles=articles)
 
+
+@main.route('/general')
+def show_articles():
+    """
+    Show articles function
+    """
+    category=get_category('general')
+    return render_template('general.html',category=category)
