@@ -124,3 +124,21 @@ def process_articles_results(articles_list):
             article_results.append(article_objects)
 
     return article_results    
+
+
+
+def get_category(category):
+    article_source_url = 'https://newsapi.org/v2/top-headlines?category={}&apiKey=d32cdd4ab5ac4bb081f769946fb5de7d'.format(category)
+    # print(article_source_url)
+    with urllib.request.urlopen(article_source_url) as url:
+        article_source_data = url.read()
+        article_source_response = json.loads(article_source_data)
+
+        article_source_results = None
+
+        if article_source_response['articles']:
+            article_source_list = article_source_response['articles']
+            article_source_results = process_articles_results(article_source_list)
+
+
+    return article_source_results
